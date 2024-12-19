@@ -3,8 +3,8 @@ package model.repository;
 public class LivroTecnico extends Livro {
     private String area;
 
-    public LivroTecnico(String titulo, String autor, String area) {
-        super(titulo, autor);
+    public LivroTecnico(String titulo, String autor, String area, int anoPublicacao) {
+        super(titulo, autor, anoPublicacao);
         this.area = area;
     }
 

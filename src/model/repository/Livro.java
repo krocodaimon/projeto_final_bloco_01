@@ -1,12 +1,14 @@
 package model.repository;
 
-public class Livro {
+public abstract class Livro {
     private String titulo;
     private String autor;
+    private int anoPublicacao; 
 
-    public Livro(String titulo, String autor) {
+    public Livro(String titulo, String autor, int anoPublicacao) {
         this.titulo = titulo;
         this.autor = autor;
+        this.anoPublicacao = anoPublicacao;
     }
 
     public String getTitulo() {
@@ -25,9 +27,16 @@ public class Livro {
         this.autor = autor;
     }
 
+    public int getAnoPublicacao() {
+        return anoPublicacao;
+    }
+
+    public void setAnoPublicacao(int anoPublicacao) {
+        this.anoPublicacao = anoPublicacao;
+    }
+
     @Override
     public String toString() {
-        return "Título: " + titulo + ", Autor: " + autor;
+        return "Título: " + titulo + ", Autor: " + autor + ", Ano: " + anoPublicacao;
     }
 }
-
